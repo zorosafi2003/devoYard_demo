@@ -14,7 +14,7 @@ import { SurveyCreatorModule } from 'survey-creator-angular';
 
 @NgModule({
   declarations: [
-    SurveyWizardComponent,
+    
   
   ],
   imports: [

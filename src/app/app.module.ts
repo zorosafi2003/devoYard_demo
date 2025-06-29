@@ -15,22 +15,23 @@ import { AngularSvgIconModule } from "angular-svg-icon";
 import { environment } from "environments/environment";
 import { helperReducer } from "./core/states/helpers/helper.reducer";
 import { LandingPageModule } from "./main/landing-page/landing-page.module";
-import { PagesModule } from "./main/pages/pages.module";
 import { ComponentsModule } from "./shared/components/components.module";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ToastModule } from 'primeng/toast';
 import { HttpRequestInterceptor } from "./common/HttpRequestInterceptor/http-request-interceptor.interceptor";
 import { MessageModule } from 'primeng/message';
 import { MessageService } from "primeng/api";
+import { SurveyWizardComponent } from "./main/survey/survey-wizard/survey-wizard.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent ,
+    SurveyWizardComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, SurveyModule, SurveyCreatorModule ,
     // Importing the ComponentsModule to include shared components
       ComponentsModule, HttpClientModule, AngularSvgIconModule.forRoot(), MessageModule,
-    NgbModule, LandingPageModule, PagesModule, BrowserAnimationsModule, ToastModule,
+    NgbModule, LandingPageModule, BrowserAnimationsModule, ToastModule,
     StoreModule.forRoot({
       helpers: helperReducer
     }), 
