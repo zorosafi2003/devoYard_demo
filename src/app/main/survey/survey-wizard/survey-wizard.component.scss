@@ -1,8 +1,37 @@
-:host ::ng-deep .survey-root__container {
-    font-family: "Almarai", sans-serif !important;
+// ====================================
+// Survey Wizard Component Styles
+// ====================================
+
+// Variables
+$font-family-primary: "Almarai", sans-serif;
+$color-primary: #4c3d8f;
+$color-text-dark: var(--dark-100, #363636);
+$font-size-title: 18px;
+$font-size-base: 16px;
+$font-weight-bold: 700;
+$line-height-base: 34px;
+$line-height-title: 20.6px;
+$spacing-sm: 4px;
+$spacing-md: 10px;
+$word-spacing: 3px;
+
+// Mixins
+@mixin base-typography {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
 }
 
-:host ::ng-deep .quastion-title {
+@mixin survey-text-styling {
+  @include base-typography;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  padding-right: $spacing-sm;
+  margin-bottom: 0;
+}
+
+:host ::ng-deep .quastion-title{
     color: var(--dark-100, #363636);
     text-align: right;
     font-family: Almarai;
@@ -12,73 +41,68 @@
     line-height: 20.6px;
 }
 
+// Survey Container Styles
 :host ::ng-deep .survey-root__container {
-    font-family: "Almarai", sans-serif !important;
+  font-family: $font-family-primary !important;
 }
 
-:host ::ng-deep .radio-group__container .sd-item__control-label {
-    font-family: "Almarai", sans-serif !important;
-    color: #4C3D8F;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 34px;
-    padding-right: 4px;
-    margin-bottom: 0px;
+// Question Title Styles
+:host ::ng-deep .question-title {
+  @include base-typography;
+  color: $color-text-dark;
+  text-align: right;
+  font-size: $font-size-title;
+  line-height: $line-height-title;
 }
 
+// Radio Group Styles
+:host ::ng-deep .radio-group__container {
+  .sd-item__control-label {
+    @include survey-text-styling;
+  }
+}
+
+// Rating Component Styles
 :host ::ng-deep .sd-rating {
-    font-family: "Almarai", sans-serif !important;
-    font-size: 16px;
-    font-style: normal;
+  @include base-typography;
+  font-size: $font-size-base;
 
-    .sd-rating__min-text,
-    .sd-rating__max-text {
-        font-family: "Almarai", sans-serif !important;
-        color: #4C3D8F !important;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 34px;
-        padding-right: 4px;
-        margin-bottom: 0px;
-    }
+  .sd-rating__min-text,
+  .sd-rating__max-text {
+    @include survey-text-styling;
+    color: $color-primary !important;
+  }
 
-    .sd-rating__item-text {
-        font-size: 16px;
-        font-weight: 700;
-    }
+  .sd-rating__item-text {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+  }
 }
 
-:host ::ng-deep .sd-table .sd-table__cell--row-text {
-    font-family: "Almarai", sans-serif !important;
-    color: #4C3D8F;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 34px;
-    padding-right: 4px;
-    margin-bottom: 0px;
+// Table Styles
+:host ::ng-deep .sd-table {
+  .sd-table__cell--row-text {
+    @include survey-text-styling;
+  }
 }
 
-:host ::ng-deep textarea , :host ::ng-deep input {
-    font-family: "Almarai", sans-serif !important;
-    color: #4C3D8F;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 34px;
-    padding-right: 4px;
-    margin-bottom: 0px;
-    word-spacing: 3px
+// Form Input Styles
+:host ::ng-deep {
+  textarea,
+  input {
+    @include survey-text-styling;
+    word-spacing: $word-spacing;
+  }
 }
 
-:host ::ng-deep .sd-multipletext__content .sv-string-viewer--multiline{
-       font-family: "Almarai", sans-serif !important;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 34px;
-   padding-left: 10px;
-    margin-bottom: 0px;
-    word-spacing: 3px
+// Multiple Text Component Styles
+:host ::ng-deep .sd-multipletext__content {
+  .sv-string-viewer--multiline {
+    @include base-typography;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    padding-left: $spacing-md;
+    margin-bottom: 0;
+    word-spacing: $word-spacing;
+  }
 }
