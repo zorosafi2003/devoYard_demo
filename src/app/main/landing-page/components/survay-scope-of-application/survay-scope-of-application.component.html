@@ -1,0 +1,28 @@
+<section id="scopeOfApplication" class="pt-md-11 scopeOfApplication-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12">
+          <h3 class="section-title">
+            <svg-icon src="/assets/images/icon/scopeOfApplication.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+            {{ScopeOfApplicationData?.scopeOfApplication?.title}}
+            <span class="section-sub-title">
+              {{ScopeOfApplicationData?.scopeOfApplication?.subtitle}}
+            </span>
+
+          </h3>
+
+          <!-- Text -->
+          <div class="d-flex flex-wrap scopeOfApplication-container">
+            <div class="scopeOfApplication-card"
+              *ngFor="let scopeOfApplicationSection of ScopeOfApplicationData?.cards">
+              <div class="scopeOfApplication-text">
+                {{scopeOfApplicationSection.card.title}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

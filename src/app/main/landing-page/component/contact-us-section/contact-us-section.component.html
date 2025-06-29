@@ -1,0 +1,52 @@
+
+<section id="contact-us" class=" pt-md-11 bg-contact-us contact-us-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 ">
+          <div class="d-flex align-items-center " *ngFor="let contactUsSection of contactUs?.cards">
+
+       
+            <div class="flex-shrink-1">
+              <img src="/assets/images/icon/time-icon.svg" *ngIf="contactUsSection.card.contactUsTypeId ==  contactUsTypeId.TimesOfWork" width="20">
+         
+              <img src="/assets/images/icon/location.svg" *ngIf="contactUsSection.card.contactUsTypeId ==  contactUsTypeId.Location" width="20">
+         
+              <img src="/assets/images/icon/call-icon.svg"  *ngIf="contactUsSection.card.contactUsTypeId ==  contactUsTypeId.Phone" width="20">
+        
+              <img src="/assets/images/icon/email-icon.svg"  *ngIf="contactUsSection.card.contactUsTypeId ==  contactUsTypeId.Email" width="20">
+          
+              <img src="/assets/images/icon/link-icon.svg"  *ngIf="contactUsSection.card.contactUsTypeId ==  contactUsTypeId.Link" width="20" >
+            </div>
+            <div class="p-2 w-100">
+              <div class="d-flex flex-column">
+                <div>
+                  <label *ngIf="contactUsSection.card.contactUsTypeId !=  contactUsTypeId.Link">
+                   {{contactUsSection.card.title}}
+                  </label>
+                  <a target="_blank" class="text-white" [href]="contactUsSection.card.url" *ngIf="contactUsSection.card.contactUsTypeId ==  contactUsTypeId.Link">
+                    {{contactUsSection.card.title}}
+                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- id="map" -->
+        <div id="map" class="col-lg-6  map-footer" style="width: 500px; height: 400px;" >
+          
+        </div>
+      </div>
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- <iframe 
+  style="width: 100%;"
+
+  height="300" 
+  frameborder="0" 
+  scrolling="no" 
+  marginheight="0" 
+  marginwidth="0" 
+  src="https://maps.google.com/maps?q=24.7288369,46.5971507&hl=es&z=14&amp;output=embed"
+ >
+ </iframe> -->

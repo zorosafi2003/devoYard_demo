@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" aria-label="Offcanvas navbar large">
+    <div class="container p-0">
+      <a class="navbar-brand" (click)="onReloadSurvey()"><img src="/assets/images/etec-logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+        aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <svg-icon src="/assets/images/icon/bar-icon.svg"></svg-icon>
+  
+      </button>
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <img class="offcanvas-title" src="/assets/images/etec-logo.svg" alt="">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" *ngIf="!hideLandingPageMenu">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" *ngIf="isHeaderActive == 'true'">
+            <li class="nav-item" *ngFor="let item of HeaderItem">
+              <a class="nav-link " (click)="scroll('#sectin' + item.navigationId , 0)"  >
+                {{item.name}}
+              </a>
+            </li>
+            
+          </ul>
+          <!-- <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
+      </div>
+    </div>
+  </nav>

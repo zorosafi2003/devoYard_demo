@@ -1,16 +1,92 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>SurveyJS + Angular App</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Title -->
+  <title>هيئة تقويم التعليم والتدريب | ETECKSA</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="هيئة تقويم التعليم والتدريب ETEC ، هي الجهة المختصة في المملكة بالتقويم والقياس واعتماد المؤهلات، في التعليم والتدريب في القطاعين العام والخاص لرفع جودتهما وكفايتهما ومساهمتهما في خدمة الاقتصاد والتنمية الوطنية">
+  <meta name="keywords"
+    content="هيئة تقويم التعليم والتدريب ، ETEC ، قياس ، مسار ، اعتماد ، تميز ، هيئة ، تقويم التعليم ، qiyas ، NCAAA ،masar">
+  <meta name="author" content="هيئة تقويم التعليم والتدريب | ETECKSA" />
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Meta Property -->
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="هيئة تقويم التعليم والتدريب | ETECKSA">
+  <meta property="og:description"
+    content="هيئة تقويم التعليم والتدريب ETEC ، هي الجهة المختصة في المملكة بالتقويم والقياس واعتماد المؤهلات، في التعليم والتدريب في القطاعين العام والخاص لرفع جودتهما وكفايتهما ومساهمتهما في خدمة الاقتصاد والتنمية الوطنية">
+  <meta property="og:url" content="https://survey.etec.sa">
+  <meta property="og:site_name" content="هيئة تقويم التعليم والتدريب | ETECKSA">
+  <meta property="article:publisher" content="https://survey.etec.sa">
+  <meta property="og:image" content="https://survey.etec.sa/src/assets/media/og-image.png">
+  <meta property="og:image:width" content="875">
+  <meta property="og:image:height" content="875">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/assets/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/meta/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/assets/meta/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="src/assets/meta/safari-pinned-tab.svg" color="#4c3d8f">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- canonical-->
+  <link rel="canonical" href="https://survey.etec.sa">
+
+  <!-- other meta not used before -->
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- <meta http-equiv="refresh" content="5; url=https://website.com"> -->
+  <meta http-equiv="Expires" content="0">
+  <meta name="rating" content="adult">
+  <meta name="GENERATOR" content="MS">
+  <meta name="copyright" content="Copyright ETECKSA- 2024">
+  <meta name="email" content=" ">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="next-head-count" content="25">
+  <meta name="title" content="هيئة تقويم التعليم والتدريب | ETECKSA">
+
+  <!-- Meta Twitter -->
+  <meta property="twitter:card" content="src/assets/meta/og-image.png">
+  <meta property="twitter:url" content="https://survey.etec.sa">
+  <meta property="twitter:title" content="هيئة تقويم التعليم والتدريب | ETECKSA">
+  <meta property="twitter:description"
+    content="هيئة تقويم التعليم والتدريب ETEC ، هي الجهة المختصة في المملكة بالتقويم والقياس واعتماد المؤهلات، في التعليم والتدريب في القطاعين العام والخاص لرفع جودتهما وكفايتهما ومساهمتهما في خدمة الاقتصاد والتنمية الوطنية">
+  <meta property="twitter:image" content=".png">
+
+  <!-- google -->
+  <meta name="googlebot" content="index,follow">
+  <metaname="google" content="nositelinkssearchbox">
+    <meta name="google-site-verification" content="0000">
+
+
+    <title>EtecServay</title>
+    <base href="/">
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9QaD_Qi6kLx_TUbjmUs3RH5rTR8sUsjc"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J74SX93ERW"></script>
+    <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-J74SX93ERW'); 
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
     <script src="https://cdn.rawgit.com/inexorabletash/polyfill/master/typedarray.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-  </head>
-  <body>
-    <app-root>Loading...</app-root>
-  </body>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
 </html>

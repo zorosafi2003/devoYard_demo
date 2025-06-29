@@ -1,0 +1,26 @@
+<section id="objectives" class="pt-md-11 objectives-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 ">
+
+          <!-- Image -->
+
+          <h3 class="section-title">
+            <img src="{{DefaultCardSection?.iconUrl == '' ? '/assets/images/icon/objectives.svg' : DefaultCardSection?.iconUrl}} " width="24" />
+            {{DefaultCardSection?.title}}
+          </h3>
+          <!-- Text -->
+          <div class="d-flex flex-wrap justify-content-around objectives-container">
+            <div class="objectives-card" *ngFor="let goalCards of DefaultCardSection?.cards">
+              <div class="objective-icon">
+                <img src="{{goalCards.card.iconFileUrl == '' ? '/assets/images/icon/objectives-1.svg' : goalCards.card.iconFileUrl}}" width="28">
+              </div>
+              <div class="objective-text">
+                {{goalCards.card.title}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

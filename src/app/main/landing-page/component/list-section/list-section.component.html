@@ -1,0 +1,23 @@
+<section class="pt-md-11 positive-effects-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12">
+          <!-- Image -->
+          <h3 class="section-title">
+            <img src="{{ListSection?.iconUrl == '' ? '/assets/images/icon/positive-effects.svg' : ListSection?.iconUrl}}" width="24" />
+            {{ListSection?.title}}
+          </h3>
+          <!-- Text -->
+          <div class="d-flex flex-wrap positive-effects-container">
+            <div class="positive-effects-card">
+              <ul>
+                <li *ngFor="let positiveEffectSection of ListSection?.cards">
+                  {{positiveEffectSection.card.title}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

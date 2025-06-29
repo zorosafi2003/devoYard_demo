@@ -1,0 +1,12 @@
+<app-banner-section  [panner]="Sections" *ngIf="Sections?.templateId == 1"></app-banner-section>
+<app-default-card-section [DefaultCardSection]="Sections" *ngIf="Sections?.templateId == 2"></app-default-card-section>
+<app-list-section [ListSection]="Sections" *ngIf="Sections?.templateId == 3"></app-list-section>
+<app-advance-card-sectio [AdvanceCardSectioData]="Sections" *ngIf="Sections?.templateId == 4"></app-advance-card-sectio>
+
+
+<app-default-card-with-button-section [DefaultCardWithButtonSection]="Sections" *ngIf="Sections?.templateId == 5"></app-default-card-with-button-section>
+<app-file-card-section [FileCardSection]="Sections" *ngIf="Sections?.templateId == 6"></app-file-card-section>
+<app-contact-us-section [contactUs]="Sections" *ngIf="Sections?.templateId == 7"></app-contact-us-section>
+<app-simple-card-section [SectionsList]="Sections" *ngIf="Sections?.templateId == 8"></app-simple-card-section>
+<app-text-section [TextSection]="Sections" *ngIf="Sections?.templateId == 9"></app-text-section>
+

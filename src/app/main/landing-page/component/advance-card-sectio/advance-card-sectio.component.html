@@ -1,0 +1,23 @@
+<section id="Implementation-Steps" class="pt-md-11 Implementation-Steps-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12">
+          <h3 class="section-title">
+            <img src="{{AdvanceCardSectioData?.iconUrl == '' ? '/assets/images/icon/ImplementationSteps.svg' : AdvanceCardSectioData?.iconUrl}}" width="24" />
+            {{AdvanceCardSectioData?.title}}
+          </h3>
+          <!-- Text -->
+          <div class="d-flex flex-wrap ImplementationSteps-container justify-content-around">
+            <div class="ImplementationSteps-card"
+              *ngFor="let implementationStepSection of AdvanceCardSectioData?.cards">
+              <div class="ImplementationSteps-text">
+                {{implementationStepSection.card.title}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

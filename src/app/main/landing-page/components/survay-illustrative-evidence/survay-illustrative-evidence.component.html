@@ -1,0 +1,33 @@
+<section class="pt-md-11 IllustrativeEvidence-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-12 col-lg-12 text-center">
+        <!-- Image -->
+        <img src="/assets/images/IllustrativeEvidence.svg"
+          class="IllustrativeEvidence-top-img img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate "
+          alt="..." data-aos="fade-up" data-aos-delay="100">
+        <h3 class="section-title">
+          <svg-icon src="/assets/images/icon/IllustrativeEvidence-icon.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+          {{explanatoryEvidence?.explanatoryEvidence?.title}}
+        </h3>
+        <div class="d-flex flex-wrap IllustrativeEvidence-container">
+          <div class="IllustrativeEvidence-card"
+            *ngFor="let explanatoryEvidenceSection of explanatoryEvidence?.cards">
+            <div class="IllustrativeEvidence-icon">
+                <img [src]="explanatoryEvidenceSection.card.iconFileUrl">
+            </div>
+            <div class="IllustrativeEvidence-text">
+              {{explanatoryEvidenceSection.card.title}} 
+            </div>
+
+            <div class="IllustrativeEvidence-action">
+              <a class="btn btn-primary" href="{{explanatoryEvidenceSection.card.url}} ">
+                استعراض
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>

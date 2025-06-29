@@ -1,0 +1,23 @@
+<section id="targetGroups" class="pt-md-11  targetGroups-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 ">
+          <!-- Image -->
+          <h3 class="section-title">
+            <img src="{{SectionsList?.iconUrl == '' ? '/assets/images/icon/targetGroups-icon.svg' : SectionsList?.iconUrl}}" width="24" />
+
+
+            {{SectionsList?.title}}
+          </h3>
+          <!-- Text -->
+          <div class="d-flex flex-wrap justify-content-around target-container">
+            <div class="target-card" *ngFor="let targetGroupPageData of SectionsList?.cards">
+              <div class="target-text">
+                {{targetGroupPageData.card.title}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

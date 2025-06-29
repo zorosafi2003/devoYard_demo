@@ -1,0 +1,36 @@
+<main class="landing-main-section">
+
+  <app-sections  id="sectin{{Section.sectionId}}" [Sections]="Section" *ngFor="let Section of landingPageData?.sectionsList; index as i "></app-sections>
+  <app-survey-faq *ngIf="landingPageData?.faqSection != null" [FAQSection]="landingPageData?.faqSection"></app-survey-faq>
+</main>
+
+
+<!-- <section id="result" class="pt-md-11 result-section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="section-title">
+            <svg-icon src="/assets/images/icon/result-icon.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+            النتائج
+            <span class="section-sub-title"> تعرض هنا نتائج استطلاعات الرأي </span>
+          </h3>
+
+          <div class="d-grid gap-2 result-button-container">
+            <button class="btn btn-secondary " type="button">نتائج استطلاع رأي الطلاب</button>
+            <button class="btn btn-secondary " type="button">نتائج استطلاع رأي أعضاء الهيئة التعليمية</button>
+            <button class="btn btn-secondary " type="button">نتائج استطلاع رأي الخريجين</button>
+            <button class="btn btn-secondary " type="button">نتائج استطلاع رأي جهات التوظيف</button>
+
+
+          </div>
+
+
+        </div>
+        <div class="col-lg-6 sa-dots-map">
+          <svg-icon src="/assets/images/sa-map.svg"></svg-icon>
+
+        </div>
+      </div>
+
+    </div>
+  </section> -->

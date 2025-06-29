@@ -1,0 +1,21 @@
+<section id="targetGroups" class="pt-md-11  targetGroups-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 ">
+          <!-- Image -->
+          <h3 class="section-title">
+            <svg-icon src="/assets/images/icon/targetGroups.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+            {{TargetGroupData?.targetGroup?.tilte}}
+          </h3>
+          <!-- Text -->
+          <div class="d-flex flex-wrap justify-content-around target-container">
+            <div class="target-card" *ngFor="let targetGroupPageData of TargetGroupData?.cards">
+              <div class="target-text">
+                {{targetGroupPageData.card.title}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

@@ -1,0 +1,43 @@
+
+<section id="contact-us" class=" pt-md-11 bg-contact-us contact-us-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 ">
+         
+          <div class="d-flex align-items-center " *ngFor="let contactUsSection of contactUs?.cards">
+            <div class="flex-shrink-1">
+              <img [src]="contactUsSection.card.iconFileUrl" width="20">
+         
+            </div>
+            <div class="p-2 w-100">
+              <div class="d-flex flex-column">
+                <div>
+                  <label>
+                   {{contactUsSection.card.title}}
+                  </label>
+                </div>
+                <div *ngIf="contactUsSection.card.subTitle != ''">
+                  <label>
+                    {{contactUsSection.card.subTitle}}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6  map-footer" >
+          <iframe 
+          width="470" 
+          height="300" 
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0" 
+          src="https://maps.google.com/maps?q=24.7288369,46.5971507&hl=es&z=14&amp;output=embed"
+         >
+         </iframe>
+        </div>
+      </div>
+
+    </div> <!-- / .container -->
+  </section>

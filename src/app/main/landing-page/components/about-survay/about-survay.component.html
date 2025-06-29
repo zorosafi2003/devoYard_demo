@@ -1,0 +1,29 @@
+<section id="about-survay" class="pt-md-11 about-survay-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 text-center">
+          <!-- Image -->
+          <img src="/assets/images/about-survay.svg"
+            class="about-survay-top-img img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate about-survay-img d-md-none d-sm-block d-md-none d-lg-none d-xl-none "
+            alt="..." data-aos="fade-up" data-aos-delay="100">
+          <h3 class="section-title">
+            <svg-icon src="/assets/images/icon/chart-icon.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+            {{aboutPannerData?.aboutPanner?.title}}
+          </h3>
+          <div class="row  aboutPanner">
+            <div class="col-lg-8">
+              <p class="text-center about-survay-paragraph">
+                {{aboutPannerData?.aboutPanner?.subTitle}}
+              </p>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block d-xl-block">
+              <img src="{{aboutPannerData?.aboutPanner?.iconFileUrl}}"
+                class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate about-survay-img"
+                alt="..." data-aos="fade-up" data-aos-delay="100">
+            </div>
+          </div>
+          <!-- Text -->
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

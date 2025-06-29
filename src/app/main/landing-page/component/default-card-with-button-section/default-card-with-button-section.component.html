@@ -1,0 +1,30 @@
+<section id="IllustrativeEvidence" class="pt-md-11 services-directory-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 text-center">
+          <img src="{{DefaultCardWithButtonSection?.mainImageUrl == '' ? '/assets/images/surveyForms.svg' : DefaultCardWithButtonSection?.mainImageUrl}}"
+          class="IllustrativeEvidence-top-img img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate "
+          alt="..." data-aos="fade-up" data-aos-delay="100">
+          <h3 class="section-title">
+            <img src="{{DefaultCardWithButtonSection?.iconUrl =='' ? '/assets/images/icon/IllustrativeEvidence-icon.svg' : DefaultCardWithButtonSection?.iconUrl}}" width="24" />
+            {{DefaultCardWithButtonSection?.title}}
+          </h3>
+          <div class="d-flex flex-wrap services-directory-container">
+            <div class="services-directory-card" *ngFor="let servicesDirectorySection of DefaultCardWithButtonSection?.cards" >
+              <div class="services-directory-icon">
+                <img [src]="servicesDirectorySection.card.iconFileUrl == '' ? '/assets/images/icon/services-directory-2.svg' : servicesDirectorySection.card.iconFileUrl ">
+              </div>
+              <div class="services-directory-text">
+                {{servicesDirectorySection.card.title}}
+              </div>
+              <div class="services-directory-action">
+                <a class="btn btn-primary" target="_blank" href="{{servicesDirectorySection.card.url}}">
+                  استعراض
+                </a>
+              </div>
+            </div>   
+          </div>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

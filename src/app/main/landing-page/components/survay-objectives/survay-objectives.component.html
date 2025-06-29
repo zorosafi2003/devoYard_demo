@@ -1,0 +1,27 @@
+<section id="objectives" class="pt-md-11 objectives-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 ">
+
+          <!-- Image -->
+
+          <h3 class="section-title">
+            <svg-icon src="/assets/images/icon/objectives.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+            {{goalSectionData?.goal?.title}}
+          </h3>
+          <!-- Text -->
+          <div class="d-flex flex-wrap justify-content-around objectives-container">
+            <div class="objectives-card" *ngFor="let goalCards of goalSectionData?.cards">
+              <div class="objective-icon">
+                <img src="{{goalCards.card.iconFileUrl}}" width="28">
+              </div>
+              <div class="objective-text">
+                {{goalCards.card.subTitle}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

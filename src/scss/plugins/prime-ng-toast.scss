@@ -1,0 +1,23 @@
+p-toast {
+    font-family: Almarai;
+
+    .p-component {
+        font-family: Almarai !important;
+
+        .p-toast-message-warning{
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+        }
+
+        .p-toast-message-info {
+            background: rgb(197 227 249) !important;
+            border: solid #094674 !important;
+            border-width: 0 0 0 6px !important; 
+            color: #000 !important;
+
+            .p-toast-icon-close {
+                color: #000 !important;
+            }
+        }
+    }
+}

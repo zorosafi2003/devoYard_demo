@@ -1,0 +1,37 @@
+<section id="FAQ" class=" pt-md-11 FAQ-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-12 ">
+          <!-- Image -->
+
+          <h3 class="section-title">
+            <img src="{{FAQSection?.faq?.iconFileUrl =='' ? '/assets/images/icon/FAQ-iocn.svg' : FAQSection?.faq?.iconFileUrl}}" width="24" />
+            {{FAQSection?.faq?.title}}
+          </h3>
+
+          <div ngbAccordion>
+            <div ngbAccordionItem *ngFor="let surveyFormSection of FAQSection?.cards">
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>  
+                  {{surveyFormSection.faqCard.question}}
+                </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template>
+                    {{surveyFormSection.faqCard.answer}}
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+       
+
+          </div>
+
+
+
+        </div>
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>

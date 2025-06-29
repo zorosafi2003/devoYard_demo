@@ -1,0 +1,84 @@
+:host ::ng-deep .survey-root__container {
+    font-family: "Almarai", sans-serif !important;
+}
+
+:host ::ng-deep .quastion-title {
+    color: var(--dark-100, #363636);
+    text-align: right;
+    font-family: Almarai;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20.6px;
+}
+
+:host ::ng-deep .survey-root__container {
+    font-family: "Almarai", sans-serif !important;
+}
+
+:host ::ng-deep .radio-group__container .sd-item__control-label {
+    font-family: "Almarai", sans-serif !important;
+    color: #4C3D8F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    padding-right: 4px;
+    margin-bottom: 0px;
+}
+
+:host ::ng-deep .sd-rating {
+    font-family: "Almarai", sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+
+    .sd-rating__min-text,
+    .sd-rating__max-text {
+        font-family: "Almarai", sans-serif !important;
+        color: #4C3D8F !important;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 34px;
+        padding-right: 4px;
+        margin-bottom: 0px;
+    }
+
+    .sd-rating__item-text {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+:host ::ng-deep .sd-table .sd-table__cell--row-text {
+    font-family: "Almarai", sans-serif !important;
+    color: #4C3D8F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    padding-right: 4px;
+    margin-bottom: 0px;
+}
+
+:host ::ng-deep textarea , :host ::ng-deep input {
+    font-family: "Almarai", sans-serif !important;
+    color: #4C3D8F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    padding-right: 4px;
+    margin-bottom: 0px;
+    word-spacing: 3px
+}
+
+:host ::ng-deep .sd-multipletext__content .sv-string-viewer--multiline{
+       font-family: "Almarai", sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+   padding-left: 10px;
+    margin-bottom: 0px;
+    word-spacing: 3px
+}
